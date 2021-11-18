@@ -1,16 +1,207 @@
-html,
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Nunito";
 }
-
 a {
-  color: inherit;
+  color: #333;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
-* {
+.overlay-box {
+  position:absolute;
+  top:30%;
+  left:50%;
+  transform:translate(-30%, -50%);
+  color: white; 
+  background: #4979ff; opacity: .6;
+  z-index: 1000;
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  padding-top: 6%;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h3{
+    margin:10px;
+}
+
+.title {
+  color: #333;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.text {
+  color: #777;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+nav {
+  margin: 10px auto 40px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+nav a {
+  margin-right: 12px;
+  border: 1px solid #777;
+  padding: 10px;
+  color: #777;
+}
+
+nav a:hover {
+  border: 1px solid #4779e4;
+  color: #4779e4;
+}
+nav .logo {
+  margin-right: auto;
+  color: #4779e4;
+  font-size: 30px;
+}
+footer {
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+.not-found {
+  text-align: center;
+}
+.not-found a {
+  color: #4979ff;
+  text-decoration: underline;
+}
+
+.user,
+.user-detail {
+  padding: 2px 16px;
+  background: #fff;
+  display: block;
+  margin: 20px 0;
+  border: 1px dashed #777;
+  border-left: 8px solid #4979ff;
+}
+
+.elli {
+
+  display: block;
+  text-align: center;
+}
+
+.btn-group {
+  width:100%;
+  display: inline-block;
+  margin:0;
+  text-align: center;
+}
+
+.user-detail {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.user-detail h2,
+.user-detail p {
+  margin: 0 auto 10px auto;
+}
+
+.user-detail label {
+  color: #4979ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.new-user {
+  width: 50%;
+  margin: auto;
+}
+
+.new-user input,
+.new-user textarea,
+.new-user select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(122, 122, 122);
   box-sizing: border-box;
+  display: block;
+}
+
+.btn {
+  background: #4779e4;
+  color: #fff;
+  border: 0;
+  padding: 4px;
+  margin: 0 4px 2px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  font-family: "Nunito";
+  text-align: center;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.btn-block{
+  display: block;
+}
+
+.btn-sm{
+  font-size: 10px;
+  padding: 2px 10px;
+  margin: 5px 0;
+}
+
+.btn-update {
+  background: #e99547;
+}
+.btn-delete {
+  background: #e94a4a;
+}
+
+.btn-delete {
+  background: #e94a4a;
+}
+
+.btn-disabled {
+  background: #777 !important;
+}
+
+@media (max-width: 768px) {
+  nav .logo {
+    margin-left: 5px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .new-user {
+    width: 80%;
+    margin: auto;
+  }
+
+  .user-detail {
+    width: 90%;
+  }
 }
