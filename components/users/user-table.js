@@ -3,6 +3,7 @@ import DataTable from "react-data-table-component";
 import ActionButtons from "../ui/action-buttons";
 import { useMutation } from "@apollo/client";
 import { GET_USERS,DELETE_USER } from "../../pages/api/queries";
+import Loading from "../ui/loading";
 
 const UserTable = (props) => {
 
@@ -61,7 +62,7 @@ const UserTable = (props) => {
 
     return (  
       <div>
-        {loading && <div className='overlay-box'>Loading...</div>}
+        {loading && <Loading/>}
         <DataTable
         columns={columns}
         data={tableData}

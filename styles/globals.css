@@ -16,14 +16,27 @@ a {
   position:absolute;
   top:30%;
   left:50%;
-  transform:translate(-30%, -50%);
+  transform:translate(-50%, -50%);
   color: white; 
   background: #4979ff; opacity: .6;
   z-index: 1000;
   width: 30%;
   height: 10%;
   text-align: center;
-  padding-top: 6%;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.no-overlay{
+  background: transparent !important;
+}
+
+.custom-ui{
+  background-color: #fff;
+  border:1px dashed  #4979ff;
+  padding: 20px;
+  
 }
 
 h1 {
@@ -203,5 +216,10 @@ footer {
 
   .user-detail {
     width: 90%;
+  }
+
+  .overlay-box {
+    padding-top: 12%;
+
   }
 }

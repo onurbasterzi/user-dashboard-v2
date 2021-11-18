@@ -1,7 +1,29 @@
 import Link from "next/link";
+import { confirmDialog } from "../ui/confirm-dialog";
+
+
+
+
 const ActionButtons = (props) => {
   const user = props.user;
   const tableStyle = props.sender === "table" ? "btn btn-sm btn-block" : "btn";
+
+  
+const handleDelete=()=>{
+  props.onDelete(user.id)
+}
+
+
+function confirm() {
+  //console.log('action',user.id);
+  confirmDialog(
+    handleDelete,
+    "Delete confirmation",
+    `Are you sure you want to delete ${user.name} ${user.lastname} ?`
+  );
+}
+
+
   return (
     <div>
       <Link href={"/users/" + user.id}>
@@ -13,7 +35,7 @@ const ActionButtons = (props) => {
       {!props.isLoading && (
         <button
           className={tableStyle + " btn-delete"}
-          onClick={() => props.onDelete(user.id)}
+          onClick={confirm}
         >
           Delete
         </button>

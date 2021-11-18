@@ -1,7 +1,7 @@
 import { useMutation } from "@apollo/client";
-import Link from "next/link";
 import { DELETE_USER, GET_USERS } from "../../pages/api/queries";
 import ActionButtons from "../ui/action-buttons";
+import Loading from "../ui/loading";
 const UserItem = (props) => {
   const [deleteUser, { loading, error }] = useMutation(DELETE_USER);
   const deleteHandler = (id) => {
@@ -18,7 +18,7 @@ const UserItem = (props) => {
   const user = props.userdata;
   return (
     <div>
-      {loading && <div className='overlay-box'>Loading...</div> }
+      {loading && <Loading/> }
       <div className="user" key={user.id}>
         <div className="elli">
           <h3>
@@ -28,6 +28,7 @@ const UserItem = (props) => {
         <div className="btn-group">
           <ActionButtons
             isLoading={loading}
+            isError={error}
             onDelete={deleteHandler}
             user={user}
           />

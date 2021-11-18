@@ -2,6 +2,8 @@ import UpdateUserForm from "../../../components/users/update-user-form";
 import { useMutation, useQuery } from "@apollo/client";
 import { UPDATE_USER, GET_USER_BY_ID } from "../../api/queries";
 import { useRouter } from "next/router";
+import Loading from "../../../components/ui/loading";
+import ErrorPage from "../../../components/ui/custom-error";
 
 const UpdateUser = () => {
   const router = useRouter();
@@ -38,8 +40,8 @@ const UpdateUser = () => {
 
   return (
     <div>
-      {errorData && <div> Error...</div>}
-      {laodingData && <div> Loading...</div>}
+      {errorData && <ErrorPage/>}
+      {laodingData && <Loading/>}
       {data && (
         <UpdateUserForm
           dataLoading={laodingData}
